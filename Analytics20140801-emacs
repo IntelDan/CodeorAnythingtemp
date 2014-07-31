@@ -1,0 +1,44 @@
+liup@liup-ThinkPad-T43:/opt/Source/ipnc_rdk/ipnc_mcfw/demos/mcfw_api_demos/multich_usecase$ cd /opt/Source/ipnc_rdk/
+liup@liup-ThinkPad-T43:/opt/Source/ipnc_rdk$ ls
+ipnc_app  ipnc_mcfw  Makefile  Rules.make  TAGS  target  tftp  ubinize.cfg
+liup@liup-ThinkPad-T43:/opt/Source/ipnc_rdk$ find ./ -name *.c | xargs grep TRI_STREAM_USECASE
+./ipnc_mcfw/demos/mcfw_api_demos/stream/stream.c:                               gUI_mcfw_config.demoCfg.usecase_id = TRI_STREA\
+M_USECASE;
+./ipnc_mcfw/demos/mcfw_api_demos/multich_usecase/ti_mcfw_ipnc_main.c:    gUI_mcfw_config.demoCfg.usecase_id  = TRI_STREAM_USEC\
+ASE;
+./ipnc_mcfw/demos/mcfw_api_demos/multich_usecase/ti_mcfw_ipnc_main.c:            gUI_mcfw_config.demoCfg.usecase_id = TRI_STRE\
+AM_USECASE;
+liup@liup-ThinkPad-T43:/opt/Source/ipnc_rdk$ find ./ -name "*.sh" | xargs grep TRISTREAM
+./ipnc_app/root_filesys/opt/ipnc/autorun_capturedisplay.sh:./bin/ipnc_rdk_mcfw.out  TRISTREAM TI2A AEWB &
+liup@liup-ThinkPad-T43:/opt/Source/ipnc_rdk$ ll ipnc_mcfw/mcfw/src_linux/mcfw_api/usecases/
+total 336
+drwxr-xr-x 2 40502 3355  4096 Jan 25  2014 ./
+drwxr-xr-x 3 40502 3355  4096 Jan 25  2014 ../
+-rwxr-xr-x 1 40502 3355   193 Jun 24  2013 MAKEFILE.MK*
+-rwxrwxr-x 1 40502 3355 21497 Jan 25  2014 multich_captMctnfDisp.c*
+-rwxrwxr-x 1 40502 3355 21568 Jan 25  2014 multich_capturedisplay.c*
+-rwxr-xr-x 1 40502 3355 14532 Jun 24  2013 multich_common.c*
+-rwxr-xr-x 1 40502 3355  2147 Jun 24  2013 multich_common.h*
+-rwxrwxr-x 1 40502 3355 36553 Jan 25  2014 multich_dualstream_demo.c*
+-rwxrwxr-x 1 40502 3355 28647 Jan 25  2014 multich_encode_decode.c*
+-rwxr-xr-x 1 40502 3355  4421 Jun 24  2013 multich_ipcbits.c*
+-rwxr-xr-x 1 40502 3355  1049 Jun 24  2013 multich_ipcbits.h*
+-rwxrwxr-x 1 40502 3355 45509 Jan 25  2014 multich_quadstream_noisefilter.c*
+-rwxrwxr-x 1 40502 3355 25055 Jan 25  2014 multich_rvm.c*
+-rwxrwxr-x 1 40502 3355 61713 Jan 25  2014 multich_tristream_fullfeature.c*
+-rwxrwxr-x 1 40502 3355 38819 Jan 25  2014 multich_tristream_lowpower.c*
+liup@liup-ThinkPad-T43:/opt/Source/ipnc_rdk$ cd ..
+liup@liup-ThinkPad-T43:/opt/Source$ cd ipnc_rdk/
+liup@liup-ThinkPad-T43:/opt/Source/ipnc_rdk$ find ./ -name *.c|xargs grep Multich_Tristream_Fullfeature
+liup@liup-ThinkPad-T43:/opt/Source/ipnc_rdk$ find ./ -name *.c|xargs grep Multich_Tristream_Lowpower
+liup@liup-ThinkPad-T43:/opt/Source/ipnc_rdk$ find ./ -name *.c|xargs grep multich_createtristreamfullftr
+liup@liup-ThinkPad-T43:/opt/Source/ipnc_rdk$ find ./ -name *.c|xargs grep MultiCh_createTriStreamFullFtr
+./ipnc_mcfw/mcfw/src_linux/mcfw_api/ti_vsys.c:            MultiCh_createTriStreamFullFtr();
+./ipnc_mcfw/mcfw/src_linux/mcfw_api/usecases/multich_dualstream_demo.c: *  @func     MultiCh_createTriStreamFullFtr
+./ipnc_mcfw/mcfw/src_linux/mcfw_api/usecases/multich_quadstream_noisefilter.c: *  @func     MultiCh_createTriStreamFullFtr
+./ipnc_mcfw/mcfw/src_linux/mcfw_api/usecases/multich_tristream_fullfeature.c: *  @func     MultiCh_createTriStreamFullFtr
+./ipnc_mcfw/mcfw/src_linux/mcfw_api/usecases/multich_tristream_fullfeature.c:Void MultiCh_createTriStreamFullFtr()
+liup@liup-ThinkPad-T43:/opt/Source/ipnc_rdk$ find ./ -name *.c|xargs grep Vsys_create
+./ipnc_mcfw/demos/mcfw_api_demos/multich_usecase/ti_mcfw_ipnc_main.c:    Vsys_create();
+./ipnc_mcfw/mcfw/src_linux/mcfw_api/ti_vsys.c:Int32 Vsys_creat./ipnc_mcfw/mcfw/src_linux/mcfw_api/ti_vdis.c: *      Please note that this API should not be called before the Vsys_create()
+
