@@ -1,0 +1,13 @@
+EX:3.12
+1.
+(defun doublenumber(number)
+  "This is a function that double the number's value"
+  (interactive "p")
+  (message "The result is %d" (+ number number)))
+(doublenumber 3)
+ps: use "C-u NUMBER M-x doublenumber" to test interactive
+2.
+(defun testfillcolumn(argument)
+       (if (> argument fill-column)
+           (message "the argument is illegal")))
+(testfillcolumn 80)	  
